@@ -12,8 +12,7 @@ RUN curl -vfsSL -O "https://releases.mattermost.com/mmctl/v${MMCTL_VERSION}/linu
     && tar -xvf linux_amd64.tar \
     && mv mmctl /usr/local/bin/mmctl \
     && chmod +x /usr/local/bin/mmctl \
-    # Clean up build dependencies and tarball
-    && rm -rf linux_amd64.tar \
+    && rm -rf linux_amd64.tar
 
 # Set the default command to show mmctl help
 CMD ["mmctl", "--help"]
