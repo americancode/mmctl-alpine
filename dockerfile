@@ -6,7 +6,7 @@ RUN apk update && \
     apk upgrade --no-cache && \
     apk add bash curl tar wget git ca-certificates
 
-ENV MMCTL_VERSION=9.11.0
+ENV MMCTL_VERSION=10.12.2
 # Install required dependencies: curl for downloading, and ca-certificates for HTTPS
 RUN curl -vfsSL -O "https://releases.mattermost.com/mmctl/v${MMCTL_VERSION}/linux_amd64.tar" \
     && tar -xvf linux_amd64.tar \
